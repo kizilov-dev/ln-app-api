@@ -1,0 +1,43 @@
+### Register a new user
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+  "username": "kizilov",
+  "email": "kizilov@mail.ru",
+  "password": "password123",
+  "target_language": "english"
+}
+
+### Register with invalid data (short username)
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+  "username": "te",
+  "email": "test@example.com",
+  "password": "password123",
+  "target_language": "english"
+}
+
+### Register with invalid data (invalid email)
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "invalid-email",
+  "password": "password123",
+  "target_language": "english"
+}
+
+### Register with invalid data (short password)
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "test@example.com",
+  "password": "12345",
+  "target_language": "english"
+}

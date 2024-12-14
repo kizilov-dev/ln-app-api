@@ -1,0 +1,10 @@
+### Get user profile (requires authentication)
+GET http://localhost:3000/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsImVtYWlsIjoia2l6aWxvdkBtYWlsLnJ1IiwiaWF0IjoxNzMzNzczNjgyLCJleHAiOjE3MzM4NjAwODJ9.DkjR3r5b1kingX7VYLbbv3G0lymkT4btT1D59pce2fg
+
+### Get user profile without token
+GET http://localhost:3000/users/profile
+
+### Get user profile with invalid token
+GET http://localhost:3000/users/profile
+Authorization: Bearer invalid.token.here
