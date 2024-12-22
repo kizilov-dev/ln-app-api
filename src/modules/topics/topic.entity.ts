@@ -21,9 +21,6 @@ export class Topic {
   })
   difficulty_level: DifficultyLevel;
 
-  @Column({ name: 'min_duration_seconds', default: 60 })
-  min_duration_seconds: number;
-
   @Column({ name: 'is_active', default: true })
   is_active: boolean;
 

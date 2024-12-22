@@ -43,6 +43,14 @@ export class TopicsRepository {
     });
   }
 
+  async findRandom(level: DifficultyLevel, random: number): Promise<Topic[]> {
+    return this.repository.createQueryBuilder('topics')
+      .where({ difficulty_level: level })
+      .orderBy('RAND()')
+      .limit(random)
+      .getMany();
+  }
+
   async findActiveTopics(): Promise<Topic[]> {
     return this.repository.find({
       where: { is_active: true }

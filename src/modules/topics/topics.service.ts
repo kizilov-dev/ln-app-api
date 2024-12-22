@@ -2,6 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { TopicsRepository } from './topics.repository';
 import { Topic } from './topic.entity';
 import { DifficultyLevel } from '../../common/types/difficulty_level';
+import { TopicDto } from './topics.dto';
 
 @Injectable()
 export class TopicsService {
@@ -42,6 +43,11 @@ export class TopicsService {
 
   async getTopicsByDifficulty(level: DifficultyLevel): Promise<Topic[]> {
     return this.topicsRepository.findByDifficultyLevel(level);
+  }
+
+  async getRandomTopics(level: DifficultyLevel, random: number): Promise<TopicDto[]> {
+    const res =  await this.topicsRepository.findRandom(level, random);
+    return res.map((topic) => new TopicDto(topic));
   }
 
   async getActiveTopics(): Promise<Topic[]> {

@@ -1,13 +1,13 @@
-import { 
-  Controller, 
-  Get, 
-  Post, 
-  Put, 
-  Delete, 
-  Body, 
-  Param, 
-  ParseIntPipe, 
-  Query 
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Delete,
+  Body,
+  Param,
+  ParseIntPipe,
+  Query,
 } from '@nestjs/common';
 import { TopicsService } from './topics.service';
 import { Topic } from './topic.entity';
@@ -20,8 +20,12 @@ export class TopicsController {
   @Get()
   async getAllTopics(
     @Query('difficulty') difficulty?: DifficultyLevel,
-    @Query('active') active?: boolean
+    @Query('active') active?: boolean,
+    @Query('random') random?: number
   ) {
+    if (random) {
+      return this.topicsService.getRandomTopics(difficulty, random);
+    }
     if (difficulty) {
       return this.topicsService.getTopicsByDifficulty(difficulty);
     }

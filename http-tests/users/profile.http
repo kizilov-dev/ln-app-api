@@ -1,6 +1,6 @@
 ### Get user profile (requires authentication)
 GET http://localhost:3000/users/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsImVtYWlsIjoia2l6aWxvdkBtYWlsLnJ1IiwiaWF0IjoxNzMzNzczNjgyLCJleHAiOjE3MzM4NjAwODJ9.DkjR3r5b1kingX7VYLbbv3G0lymkT4btT1D59pce2fg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoia2l6aWxvdkBtYWlsLnJ1IiwiaWF0IjoxNzM0ODY2Mjc2LCJleHAiOjE3MzU0NzEwNzZ9.UPvLzHLIxtqCNmInnSzcXipLekcelpNBdMswzU4R9fE
 
 ### Get user profile without token
 GET http://localhost:3000/users/profile

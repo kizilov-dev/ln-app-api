@@ -16,6 +16,10 @@ export class RegisterDto {
   @IsString()
   @IsNotEmpty()
   target_language: string;
+
+  @IsString()
+  @IsNotEmpty()
+  user_language: string;
 }
 
 export class LoginDto {
