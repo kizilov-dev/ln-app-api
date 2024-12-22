@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PhrasesRepository } from './phrases.repository';
 import { Phrase } from './phrase.entity';
-import { DifficultyLevel } from '../topics/topic.entity';
+import { DifficultyLevel } from '../../common/types/difficulty_level';
 
 @Injectable()
 export class PhrasesService {

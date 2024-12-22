@@ -1,16 +1,11 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, ManyToMany } from 'typeorm';
 import { Recording } from '../recordings/recording.entity';
 import { Phrase } from '../phrases/phrase.entity';
-
-export enum DifficultyLevel {
-  BEGINNER = 'beginner',
-  INTERMEDIATE = 'intermediate',
-  ADVANCED = 'advanced'
-}
+import { DifficultyLevel } from '../../common/types/difficulty_level';
 
 @Entity('topics')
 export class Topic {
-  @PrimaryGeneratedColumn({ name: 'topic_id' })
+  @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
@@ -31,6 +26,9 @@ export class Topic {
 
   @Column({ name: 'is_active', default: true })
   is_active: boolean;
+
+  @Column('text')
+  language: string;
 
   @Column({ 
     name: 'created_at', 

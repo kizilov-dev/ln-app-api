@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { PhrasesService } from './phrases.service';
 import { Phrase } from './phrase.entity';
-import { DifficultyLevel } from '../topics/topic.entity';
+import { DifficultyLevel } from '../../common/types/difficulty_level';
 
 @Controller('phrases')
 export class PhrasesController {

@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { TopicsRepository } from './topics.repository';
-import { Topic, DifficultyLevel } from './topic.entity';
+import { Topic } from './topic.entity';
+import { DifficultyLevel } from '../../common/types/difficulty_level';
 
 @Injectable()
 export class TopicsService {

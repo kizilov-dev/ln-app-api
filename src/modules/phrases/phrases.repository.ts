@@ -2,7 +2,8 @@ import { Inject, Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Phrase } from './phrase.entity';
 import { PHRASE_REPOSITORY } from '../../common/database/providers.constants';
-import { DifficultyLevel } from '../topics/topic.entity';
+import { DifficultyLevel } from '../../common/types/difficulty_level';
+
 
 @Injectable()
 export class PhrasesRepository {

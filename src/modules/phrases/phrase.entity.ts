@@ -1,20 +1,19 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToMany } from 'typeorm';
-import { Topic, DifficultyLevel } from '../topics/topic.entity';
+import { Topic } from '../topics/topic.entity';
+import { DifficultyLevel } from '../../common/types/difficulty_level';
 
 @Entity('phrases')
 export class Phrase {
-  @PrimaryGeneratedColumn({ 
-    name: 'phrase_id',
-    type: 'int' 
+  @PrimaryGeneratedColumn({
+    type: 'int'
   })
   id: number;
 
-  @Column({ 
-    name: 'phrase_text', 
+  @Column({
     type: 'text',
     nullable: false 
   })
-  text: string;
+  phrase_text: string;
 
   @Column({ 
     type: 'text', 
@@ -25,8 +24,6 @@ export class Phrase {
   @Column({
     type: 'enum',
     enum: DifficultyLevel,
-    enumName: 'difficulty_level_enum',
-    name: 'difficulty_level',
     nullable: false
   })
   difficulty_level: DifficultyLevel;

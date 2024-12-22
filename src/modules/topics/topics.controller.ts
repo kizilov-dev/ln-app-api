@@ -10,7 +10,8 @@ import {
   Query 
 } from '@nestjs/common';
 import { TopicsService } from './topics.service';
-import { Topic, DifficultyLevel } from './topic.entity';
+import { Topic } from './topic.entity';
+import { DifficultyLevel } from '../../common/types/difficulty_level';
 
 @Controller('topics')
 export class TopicsController {

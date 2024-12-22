@@ -1,7 +1,8 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
-import { Topic, DifficultyLevel } from './topic.entity';
+import { Topic } from './topic.entity';
 import { TOPIC_REPOSITORY } from '../../common/database/providers.constants';
+import { DifficultyLevel } from '../../common/types/difficulty_level';
 
 @Injectable()
 export class TopicsRepository {

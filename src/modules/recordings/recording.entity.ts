@@ -4,7 +4,7 @@ import { Topic } from '../topics/topic.entity';
 
 @Entity('recordings')
 export class Recording {
-  @PrimaryGeneratedColumn({ name: 'recording_id' })
+  @PrimaryGeneratedColumn()
   id: number;
 
   @Column({ name: 'user_id' })

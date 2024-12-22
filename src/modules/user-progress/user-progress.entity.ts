@@ -3,10 +3,10 @@ import { User } from '../users/user.entity';
 
 @Entity('user_progress')
 export class UserProgress {
-  @PrimaryGeneratedColumn({ name: 'progress_id' })
+  @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ name: 'user_id' })
+  @Column()
   user_id: number;
 
   @Column({ name: 'current_streak', default: 0 })
